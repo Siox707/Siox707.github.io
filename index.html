@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Alba Gordillo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Animación para la entrada de letras */
+        @keyframes textEnter {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animación al pasar por encima de los cuadros de texto */
+        @keyframes hoverText {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
+            }
+            100% {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(255, 182, 193, 0.9);
+            }
+        }
+
+        /* Estilo general */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ffb3cc;
+            text-align: center;
+            margin-top: 150px;
+            animation: textEnter 2s ease-out;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #ffb3cc;
+            text-align: center;
+            margin-top: 20px;
+            animation: textEnter 2s ease-out 0.5s;
+        }
+
+        /* Estilo de la animación para el emoji */
+        .emoji {
+            font-size: 4rem;
+            display: block;
+            text-align: center;
+            animation: textEnter 2s ease-out 1s;
+        }
+
+        .hero {
+            padding: 100px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .cute-btn {
+            background-color: #ffb3cc;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cute-btn:hover {
+            background-color: #ffccd9;
+        }
+
+        /* Fondo de la parte de arriba */
+        header {
+            background-color: #f8f8f8;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffb3cc;
+            text-decoration: none;
+            font-size: 12px; /* Letras más pequeñas en la barra de navegación */
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s, box-shadow 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffccd9;
+            box-shadow: 0 0 10px #ffccd9;
+        }
+
+        /* Sección "Acerca de mí" */
+        #about {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #about h3 {
+            font-size: 2rem;
+            color: #ffb3cc;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Sección de proyectos */
+        #projects {
+            padding: 50px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #projects h3 {
+            font-size: 2rem;
+            color: #ffb3cc;
+            margin-bottom: 30px;
+        }
+
+        .projects-btns {
+            margin-bottom: 40px;
+        }
+
+        .projects-btns button {
+            background-color: #ffb3cc;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .projects-btns button:hover {
+            background-color: #ffccd9;
+        }
+
+        .projects-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-box {
+            width: 45%;
+            background-color: #fff;
+            border: 2px solid #ffb3cc;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-box:hover {
+            animation: hoverText 0.5s ease-out;
+        }
+
+        .project-box h4 {
+            font-size: 1.5rem;
+            color: #ffb3cc;
+            margin-bottom: 10px;
+        }
+
+        .project-box p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .project-box img, .project-box video, .project-box gif {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .instagram-link {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .instagram-link a {
+            color: #ffb3cc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .instagram-link a:hover {
+            color: #ffccd9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Instagram -->
+    <section class="instagram-link">
+        <p>¡Sígueme en Instagram! <a href="https://www.instagram.com/pinkpotato_v" target="_blank">pinkpotato_v 🌸</a></p>
+    </section>
+
+    <!-- Sección de bienvenida -->
+    <section id="home" class="hero">
+        <h1>¡Bienvenido a mi Portafolio! 👋✨</h1>
+        <h2>¡Explora mis proyectos y creaciones con mucho estilo! 😄🎨</h2>
+        <span class="emoji">🌸</span>
+        <button class="cute-btn"><a href="#projects" style="text-decoration: none; color: white;">Descubre más</a></button>
+    </section>
+
+    <!-- Sección sobre mí -->
+    <section id="about">
+        <h3>Acerca de mí</h3>
+        <p>
+            ¡Hola! Soy un entusiasta de la creación digital, y me encanta explorar diferentes herramientas para crear arte. Tengo una pasión por la animación, la ilustración y el diseño, y he estado trabajando con varias plataformas como Blender, Krita, Toon Boom Harmony, Clip Studio Paint, entre otras. ¡Me emociona compartir mis proyectos contigo!
+        </p>
+    </section>
+
+    <!-- Sección de proyectos -->
+    <section id="projects">
+        <h3 style="color: white; font-weight: bold;">Mis Proyectos</h3>
+        <div class="projects-btns">
+            <button onclick="showProject('blender')" style="color: white; font-weight: bold;">Blender</button>
+            <button onclick="showProject('krita')" style="color: white; font-weight: bold;">Krita</button>
+            <button onclick="showProject('toonboom')" style="color: white; font-weight: bold;">Toon Boom Harmony</button>
+            <button onclick="showProject('clipstudio')" style="color: white; font-weight: bold;">Clip Studio Paint</button>
+            <button onclick="showProject('illustrations')" style="color: white; font-weight: bold;">Ilustraciones Aleatorias</button>
+        </div>
+        
+        <!-- Sección de los proyectos -->
+        <div id="blender" class="projects-section" style="display:none;">
+            <div class="project-box">
+                <h4>Proyecto 1 en Blender</h4>
+                <img src="blender1.jpg" alt="Proyecto 1 en Blender">
+            </div>
+            <div class="project-box">
+                <h4>Proyecto 2 en Blender</h4>
+                <img src="blender2.jpg" alt="Proyecto 2 en Blender">
+            </div>
+            <div class="project-box">
+                <h4>Proyecto 3 en Blender</h4>
+                <img src="blender3.jpg" alt="Proyecto 3 en Blender">
+            </div>
+            <div class="project-box">
+                <h4>Proyecto 4 en Blender</h4>
+                <img src="blender4.jpg" alt="Proyecto 4 en Blender">
+            </div>
+        </div>
+
+        <div id="krita" class="projects-section" style="display:none;">
+            <div class="project-box">
+                <h4>Proyecto 1 en Krita</h4>
+                <video src="krita1.mp4" controls></video>
+                <img src="krita1.gif" alt="GIF 1 en Krita">
+            </div>
+            <div class="project-box">
+                <h4>Proyecto 2 en Krita</h4>
+                <video src="krita2.mp4" controls></video>
+                <img src="krita2.gif" alt="GIF 2 en Krita">
+            </div>
+        </div>
+
+        <div id="toonboom" class="projects-section" style="display:none;">
+            <div class="project-box">
+                <h4>Proyecto 1 en Toon Boom</h4>
+                <video src="toonboom1.mp4" controls></video>
+                <img src="toonboom1.gif" alt="GIF 1 en Toon Boom">
+            </div>
+            <div class="project-box">
+                <h4>Proyecto 2 en Toon Boom</h4>
+                <video src="toonboom2.mp4" controls></video>
+                <img src="toonboom2.gif" alt="GIF 2 en Toon Boom">
+            </div>
+        </div>
+
+        <div id="clipstudio" class="projects-section" style="display:none;">
+            <div class="project-box">
+                <h4>Proyecto 1 en Clip Studio Paint</h4>
+                <video src="hugo.mp4" controls></video>
+                <img src="clipstudio1.gif" alt="GIF 1 en Clip Studio">
+            </div>
+            <div class="project-box">
+                <h4>Proyecto 2 en Clip Studio Paint</h4>
+                <video src="clipstudio2.mp4" controls></video>
+                <img src="clipstudio2.gif" alt="GIF 2 en Clip Studio">
+            </div>
+            <div class="project-box">
+                <h4>Proyecto 3 en Clip Studio Paint</h4>
+                <img src="clipstudio3.jpg" alt="Imagen 3 en Clip Studio">
+            </div>
+        </div>
+
+        <div id="illustrations" class="projects-section" style="display:none;">
+            <div class="project-box">
+                <h4>Ilustración Aleatoria 1</h4>
+                <img src="ilustracion1.jpg" alt="Ilustración Aleatoria 1">
+            </div>
+            <div class="project-box">
+                <h4>Ilustración Aleatoria 2</h4>
+                <img src="ilustracion2.jpg" alt="Ilustración Aleatoria 2">
+            </div>
+            <div class="project-box">
+                <h4>Ilustración Aleatoria 3</h4>
+                <img src="ilustracion3.jpg" alt="Ilustración Aleatoria 3">
+            </div>
+            <div class="project-box">
+                <h4>Ilustración Aleatoria 4</h4>
+                <img src="ilustracion4.jpg" alt="Ilustración Aleatoria 4">
+            </div>
+            <div class="project-box">
+                <h4>Ilustración Aleatoria 5</h4>
+                <img src="ilustracion5.jpg" alt="Ilustración Aleatoria 5">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Función para mostrar proyectos específicos
+        function showProject(project) {
+            const projects = document.querySelectorAll('.projects-section');
+            projects.forEach(projectSection => {
+                projectSection.style.display = 'none';
+            });
+            document.getElementById(project).style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
